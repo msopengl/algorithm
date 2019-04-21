@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jbigdata", "jbigdata\jbigda
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jleetcode", "jleetcode\jleetcode.vcxproj", "{53CBF12A-5445-4F8C-8293-1A1A86CFE961}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jdynamicsarray", "jdynamicsarray\jdynamicsarray.vcxproj", "{DC2FCA4F-AFCD-41EB-A141-29C31A354392}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -67,6 +69,10 @@ Global
 		{53CBF12A-5445-4F8C-8293-1A1A86CFE961}.Debug|Win32.Build.0 = Debug|Win32
 		{53CBF12A-5445-4F8C-8293-1A1A86CFE961}.Release|Win32.ActiveCfg = Release|Win32
 		{53CBF12A-5445-4F8C-8293-1A1A86CFE961}.Release|Win32.Build.0 = Release|Win32
+		{DC2FCA4F-AFCD-41EB-A141-29C31A354392}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DC2FCA4F-AFCD-41EB-A141-29C31A354392}.Debug|Win32.Build.0 = Debug|Win32
+		{DC2FCA4F-AFCD-41EB-A141-29C31A354392}.Release|Win32.ActiveCfg = Release|Win32
+		{DC2FCA4F-AFCD-41EB-A141-29C31A354392}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
