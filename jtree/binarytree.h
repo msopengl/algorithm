@@ -1,20 +1,20 @@
-// bubblesort.h: Ã°ÅİÅÅĞò
+ï»¿// bubblesort.h: å†’æ³¡æ’åº
 //
 #pragma once
 
-// ´´½¨¶ş²æÊ÷
+// åˆ›å»ºäºŒå‰æ ‘
 PTTree createtree(int *arr, int idx, int n);
 
-// µİ¹é±éÀú¶ş²æÊ÷
+// é€’å½’éå†äºŒå‰æ ‘
 void pre_print(PTTree root, int idx, int n);
 void mid_print(PTTree root, int idx, int n);
 void back_print(PTTree root, int idx, int n);
 
-// ·Çµİ¹é±éÀú¶ş²æÊ÷
+// éé€’å½’éå†äºŒå‰æ ‘
 void pre_print_ex(PTTree root, int idx, int n);
 void mid_print_ex(PTTree root, int idx, int n);
 void back_print_ex(PTTree root, int idx, int n);
 
-// Æ½ºâ¶ş²æÊ÷
+// å¹³è¡¡äºŒå‰æ ‘
 
-// ºìºÚÊ÷B B+ B-
+// çº¢é»‘æ ‘B B+ B-
