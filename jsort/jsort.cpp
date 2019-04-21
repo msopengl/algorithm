@@ -4,7 +4,7 @@
 
 void rand_data(TArray& t_arry)
 {
-	cout<<"随机:";
+	cout<<"随机: ";
 /*	for ( int idx = 0; idx < NUM_MAX_LEN; ++idx )
 	{
 		int inum;
@@ -32,7 +32,7 @@ int main()
 	// 快速排序
 	rand_data(t_arry);
 	quicksort(t_arry.arr, 0, NUM_MAX_LEN - 1);  //排序第几到第几个元素
-	cout<<"快速排序->结果:";
+	cout<<"快速排序->结果: ";
 	print_array(t_arry.arr);
 	cout<<endl<<std::endl;
 
@@ -40,7 +40,7 @@ int main()
 	t_arry.clear();
 	rand_data(t_arry);
 	bubblesort(t_arry.arr);
-	cout<<"冒泡排序->结果:";
+	cout<<"冒泡排序->结果: ";
 	print_array(t_arry.arr);
 	cout<<endl<<std::endl;
 

@@ -10,7 +10,7 @@
 #include <iostream>
 using namespace std;
 
-#include "jcommon.h"
+#include "../jcommon/jcommon.h"
 #include "quicksort.h"
 #include "bubblesort.h"
 

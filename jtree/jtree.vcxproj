@@ -78,9 +78,13 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\jcommon\jcommon.h" />
+    <ClInclude Include="binarytree.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\jcommon\jcommon.cpp" />
+    <ClCompile Include="binarytree.cpp" />
     <ClCompile Include="jtree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

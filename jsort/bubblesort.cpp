@@ -16,6 +16,6 @@ void bubblesort(int *arr)
 		}
 		cout<<"Ã°ÅÝÅÅÐò->ÅÅÐò¹ý³Ì:step=>"<<i_bubble_pos<<"=> ";
 		print_array(arr);
-		cout <<std::endl;
+		cout<<std::endl;
 	}
 }

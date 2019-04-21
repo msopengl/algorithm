@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\jcommon">
+      <UniqueIdentifier>{6f5b47e4-aa4a-4a16-ac21-803b62045aa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jcommon">
+      <UniqueIdentifier>{579024b9-326c-4989-be00-73acbeb1c1a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -21,9 +27,21 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\jcommon\jcommon.h">
+      <Filter>Header Files\jcommon</Filter>
+    </ClInclude>
+    <ClInclude Include="binarytree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jtree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcommon\jcommon.cpp">
+      <Filter>Source Files\jcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="binarytree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
