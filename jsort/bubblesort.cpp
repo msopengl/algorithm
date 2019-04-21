@@ -1,4 +1,4 @@
-// quicksort.h: ©ЛкыеепР
+// bubblesort.h: ц╟ещеепР
 //
 #include "stdafx.h"
 int i_bubble_pos = 0;
