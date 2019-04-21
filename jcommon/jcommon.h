@@ -8,6 +8,11 @@
 using namespace std;
 
 /*
+	公共函数
+*/
+void swap(int &a, int &b);
+
+/*
 	ADT 数组
 */
 #define NUM_MAX_LEN 10
@@ -48,6 +53,12 @@ typedef struct tagTArray
 	
 }TArray,*PTArray;
 
+void print_array(int *arr);	
+
+
+/*
+	ADT 树节点
+*/
 typedef struct tagTTree
 {
 	int data;
@@ -68,9 +79,3 @@ typedef struct tagTTree
 
 }TTree, *PTTree;
 
-void swap(int &a, int &b);
-void print_array(int *arr);
-
-/*
-	ADT 树节点
-*/

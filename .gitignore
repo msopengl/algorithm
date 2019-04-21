@@ -21,3 +21,12 @@
 /jtree/Debug/*.rc
 /jtree/Debug/*.idb
 /jtree/Debug/*.pdb
+/Debug_Output/*.tlog
+/Debug_Output/*.obj
+/Debug_Output/*.lastbuildstate
+/Debug_Output/*.log
+/Debug_Output/*.manifest
+/Debug_Output/*.res
+/Debug_Output/*.rc
+/Debug_Output/*.idb
+/Debug_Output/*.pdb

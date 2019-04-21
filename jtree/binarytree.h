@@ -1,4 +1,4 @@
-﻿// bubblesort.h: 冒泡排序
+﻿// binarytree.h: 二叉树、平衡二叉树、B树
 //
 #pragma once
 
