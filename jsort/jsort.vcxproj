@@ -77,13 +77,16 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bubblesort.h" />
+    <ClInclude Include="jcommon.h" />
+    <ClInclude Include="quicksort.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="bubblesort.cpp" />
+    <ClCompile Include="jcommon.cpp" />
     <ClCompile Include="jsort.cpp" />
-    <ClCompile Include="quitsort.cpp" />
-    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="quicksort.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

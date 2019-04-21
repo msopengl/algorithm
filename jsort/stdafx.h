@@ -2,14 +2,16 @@
 // or project specific include files that are used frequently, but
 // are changed infrequently
 //
-
 #pragma once
 
-#include "targetver.h"
-
 #include <stdio.h>
-#include <tchar.h>
 
+#include <time.h>
+#include <iostream>
+using namespace std;
 
+#include "jcommon.h"
+#include "quicksort.h"
+#include "bubblesort.h"
 
 // TODO: reference additional headers your program requires here
