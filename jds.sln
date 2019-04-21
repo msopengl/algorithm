@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsort", "jds\jds.vcxproj", "{9B05572B-3BBF-462C-9FC5-8DD3B5589841}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jtree", "jtree\jtree.vcxproj", "{0A99989B-1125-40EC-8192-226085CC7F13}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jgraph", "jgraph\jgraph.vcxproj", "{E1AF686D-9623-466A-B015-3EFBA2A5EFB7}"
@@ -23,16 +21,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jleetcode", "jleetcode\jlee
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jdynamicsarray", "jdynamicsarray\jdynamicsarray.vcxproj", "{DC2FCA4F-AFCD-41EB-A141-29C31A354392}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsort", "jsort\jsort.vcxproj", "{7035846B-2D52-44BA-AFEC-846819B6CD73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B05572B-3BBF-462C-9FC5-8DD3B5589841}.Debug|Win32.ActiveCfg = Debug|Win32
-		{9B05572B-3BBF-462C-9FC5-8DD3B5589841}.Debug|Win32.Build.0 = Debug|Win32
-		{9B05572B-3BBF-462C-9FC5-8DD3B5589841}.Release|Win32.ActiveCfg = Release|Win32
-		{9B05572B-3BBF-462C-9FC5-8DD3B5589841}.Release|Win32.Build.0 = Release|Win32
 		{0A99989B-1125-40EC-8192-226085CC7F13}.Debug|Win32.ActiveCfg = Debug|Win32
 		{0A99989B-1125-40EC-8192-226085CC7F13}.Debug|Win32.Build.0 = Debug|Win32
 		{0A99989B-1125-40EC-8192-226085CC7F13}.Release|Win32.ActiveCfg = Release|Win32
@@ -73,6 +69,10 @@ Global
 		{DC2FCA4F-AFCD-41EB-A141-29C31A354392}.Debug|Win32.Build.0 = Debug|Win32
 		{DC2FCA4F-AFCD-41EB-A141-29C31A354392}.Release|Win32.ActiveCfg = Release|Win32
 		{DC2FCA4F-AFCD-41EB-A141-29C31A354392}.Release|Win32.Build.0 = Release|Win32
+		{7035846B-2D52-44BA-AFEC-846819B6CD73}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7035846B-2D52-44BA-AFEC-846819B6CD73}.Debug|Win32.Build.0 = Debug|Win32
+		{7035846B-2D52-44BA-AFEC-846819B6CD73}.Release|Win32.ActiveCfg = Release|Win32
+		{7035846B-2D52-44BA-AFEC-846819B6CD73}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

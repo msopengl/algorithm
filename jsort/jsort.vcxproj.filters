@@ -29,7 +29,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="jds.cpp">
+    <ClCompile Include="jsort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="quitsort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
