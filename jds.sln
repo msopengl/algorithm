@@ -9,8 +9,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jlist", "jlist\jlist.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jstack", "jstack\jstack.vcxproj", "{B1AF91C1-0ED0-4D1E-BCB0-DAB1EE272031}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jheap", "jheap\jheap.vcxproj", "{2EFBCABC-85F7-4EA0-A01D-0D56E2898376}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jqueue", "jqueue\jqueue.vcxproj", "{4BC98E5A-A7C9-4DB5-9EE0-4081BBC153E6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jstring", "jstring\jstring.vcxproj", "{8FCF774B-E7EC-4D06-B7F4-119E675CD1C1}"
@@ -47,10 +45,6 @@ Global
 		{B1AF91C1-0ED0-4D1E-BCB0-DAB1EE272031}.Debug|Win32.Build.0 = Debug|Win32
 		{B1AF91C1-0ED0-4D1E-BCB0-DAB1EE272031}.Release|Win32.ActiveCfg = Release|Win32
 		{B1AF91C1-0ED0-4D1E-BCB0-DAB1EE272031}.Release|Win32.Build.0 = Release|Win32
-		{2EFBCABC-85F7-4EA0-A01D-0D56E2898376}.Debug|Win32.ActiveCfg = Debug|Win32
-		{2EFBCABC-85F7-4EA0-A01D-0D56E2898376}.Debug|Win32.Build.0 = Debug|Win32
-		{2EFBCABC-85F7-4EA0-A01D-0D56E2898376}.Release|Win32.ActiveCfg = Release|Win32
-		{2EFBCABC-85F7-4EA0-A01D-0D56E2898376}.Release|Win32.Build.0 = Release|Win32
 		{4BC98E5A-A7C9-4DB5-9EE0-4081BBC153E6}.Debug|Win32.ActiveCfg = Debug|Win32
 		{4BC98E5A-A7C9-4DB5-9EE0-4081BBC153E6}.Debug|Win32.Build.0 = Debug|Win32
 		{4BC98E5A-A7C9-4DB5-9EE0-4081BBC153E6}.Release|Win32.ActiveCfg = Release|Win32
