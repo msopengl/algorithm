@@ -1,25 +1,25 @@
 #pragma once
-// other: https://www.cnblogs.com/smile233/p/8058647.html
-#define MAX_LEN 10
-class CArrayNode
+
+class CListNode
 {
 public:
-	CArrayNode();
-	~CArrayNode();
+	CListNode();
+	~CListNode();
 
 private:
-	ElementData arr[MAX_LEN+1];
 	int ilen;
 
 public:
 	bool Clear();
-	bool CreateNodes();
-	void PrintArray();
+	PTList CreateNodes(ElementData data);
+	void PrintList(PTList head);
+
 	bool InsertNode(int i, ElementData data);
 	bool DeleteNode(int i);
 	ElementData GetNode(int i);
 	int SearchNode(ElementData data);
 	bool UpdateNode(int i, ElementData data);
 	int GetLen();
+
 };
 

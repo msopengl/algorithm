@@ -1,13 +1,13 @@
 #include "jcommon.h"
 
-void swap(int &a, int &b)
+void swap(ElementData &a, ElementData &b)
 {
-	int temp = a;
+	ElementData temp = a;
 	a = b;
 	b = temp;
 }
 
-void print_array(int *arr)
+void print_array(ElementData *arr)
 {
 	for(int i = 0; i < NUM_MAX_LEN; i++)
 	{

@@ -11,10 +11,12 @@ CArrayNode::~CArrayNode()
 	this->Clear();
 }
 
-void CArrayNode::Clear()
+bool CArrayNode::Clear()
 {
 	memset(this->arr, 0, sizeof(this->arr));
 	this->ilen = 0;
+	std::cout<<"清理数据"<<std::endl;
+	return true;
 }
 
 bool CArrayNode::CreateNodes()

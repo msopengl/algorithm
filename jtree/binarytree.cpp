@@ -1,7 +1,7 @@
 // binarytree.h: Ã°ÅÝÅÅÐò
 //
 #include "stdafx.h"
-PTTree createtree(int *arr, int idx, int n)
+PTTree createtree(ElementData *arr, int idx, int n)
 {
 	if(idx >= n)
 	{

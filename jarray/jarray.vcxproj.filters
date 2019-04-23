@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\jcommon">
+      <UniqueIdentifier>{6d5f40f1-77af-4d6f-b30a-69f46d522fbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jcommon">
+      <UniqueIdentifier>{9e9720d4-bbe1-42a7-b229-4ec1f7cc0fb5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -24,6 +30,9 @@
     <ClInclude Include="arraynode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\jcommon\jcommon.h">
+      <Filter>Header Files\jcommon</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jarray.cpp">
@@ -31,6 +40,9 @@
     </ClCompile>
     <ClCompile Include="arraynode.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcommon\jcommon.cpp">
+      <Filter>Source Files\jcommon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

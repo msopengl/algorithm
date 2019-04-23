@@ -78,10 +78,12 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\jcommon\jcommon.h" />
     <ClInclude Include="arraynode.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\jcommon\jcommon.cpp" />
     <ClCompile Include="arraynode.cpp" />
     <ClCompile Include="jarray.cpp" />
   </ItemGroup>

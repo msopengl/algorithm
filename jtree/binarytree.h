@@ -3,7 +3,7 @@
 #pragma once
 
 // 创建二叉树
-PTTree createtree(int *arr, int idx, int n);
+PTTree createtree(ElementData *arr, int idx, int n);
 
 // 递归遍历二叉树
 void pre_print(PTTree root, int idx, int n);

@@ -7,4 +7,10 @@
 
 #include <stdio.h>
 
+#include <memory.h>
+#include <iostream>
+using namespace std;
+#include "../jcommon/jcommon.h"
+#include "listnode.h"
+
 // TODO: reference additional headers your program requires here

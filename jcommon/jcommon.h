@@ -7,10 +7,12 @@
 #include <iostream>
 using namespace std;
 
+typedef int ElementData;
+
 /*
 	公共函数
 */
-void swap(int &a, int &b);
+void swap(ElementData &a, ElementData &b);
 
 /*
 	ADT 数组
@@ -19,20 +21,21 @@ void swap(int &a, int &b);
 typedef struct tagTArray
 {
 	int ilen;
-	int arr[NUM_MAX_LEN];
+	ElementData arr[NUM_MAX_LEN];
 
 	tagTArray()
 	{
 		clear();
 	}
 
-	void clear()
+	bool clear()
 	{
 		ilen = 0;
 		memset(arr, 0, NUM_MAX_LEN);
+		return true;
 	}
 
-	bool add(int ival)
+	bool add(ElementData ival)
 	{
 		if (ilen > NUM_MAX_LEN)
 		{
@@ -45,7 +48,7 @@ typedef struct tagTArray
 		return true;
 	}
 
-	void remove(int ival)
+	void remove(ElementData ival)
 	{
 		arr[ilen] = ival;
 		--ilen;
@@ -53,7 +56,32 @@ typedef struct tagTArray
 	
 }TArray,*PTArray;
 
-void print_array(int *arr);	
+void print_array(ElementData *arr);	
+
+
+/*
+	ADT 链表
+*/
+typedef struct tagTList
+{
+	ElementData data;
+	struct tagTList* next;
+
+	tagTList()
+	{
+		clear();
+	}
+
+	bool clear()
+	{
+		data = -1;
+		next = NULL;
+
+		return true;
+	}
+
+
+}TList, *PTList;
 
 
 /*
@@ -61,7 +89,7 @@ void print_array(int *arr);
 */
 typedef struct tagTTree
 {
-	int data;
+	ElementData data;
 	struct tagTTree* ltree;
 	struct tagTTree* rtree;
 
@@ -70,12 +98,12 @@ typedef struct tagTTree
 		clear();
 	}
 
-	void clear()
+	bool clear()
 	{
 		ltree = NULL;
 		rtree = NULL;
 		data = -1;
+		return true;
 	}
 
 }TTree, *PTTree;
-

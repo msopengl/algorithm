@@ -9,6 +9,7 @@
 #include <memory.h>
 #include <iostream>
 using namespace std;
+#include "../jcommon/jcommon.h"
 
 #include "arraynode.h"
 
