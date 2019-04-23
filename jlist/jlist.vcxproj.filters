@@ -33,6 +33,12 @@
     <ClInclude Include="..\jcommon\jcommon.h">
       <Filter>Header Files\jcommon</Filter>
     </ClInclude>
+    <ClInclude Include="circlelistnode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlistnode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jlist.cpp">
@@ -43,6 +49,12 @@
     </ClCompile>
     <ClCompile Include="..\jcommon\jcommon.cpp">
       <Filter>Source Files\jcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="circlelistnode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlistnode.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
