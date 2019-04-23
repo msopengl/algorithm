@@ -30,3 +30,4 @@
 /Debug_Output/*.rc
 /Debug_Output/*.idb
 /Debug_Output/*.pdb
+/Debug_Output
