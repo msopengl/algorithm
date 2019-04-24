@@ -1,6 +1,5 @@
 #pragma once
 // other: https://blog.csdn.net/zichen_ziqi/article/details/80807989
-// ing
 #define MAX_LEN 20
 template<class T> class CStackNode
 {
@@ -18,7 +17,7 @@ public:
 	T top();
 	T pop();
 	int size();
-	bool empty();
+	int empty();
 	void print_data();
 
 };
@@ -52,8 +51,7 @@ void CStackNode<T>::init()
 template<class T>
 bool CStackNode<T>::push(T t)
 {
-	this->arr[this->ilen] = t;
-	++this->ilen;
+	this->arr[this->ilen++] = t;
 	return true;
 }
 
@@ -86,13 +84,9 @@ int CStackNode<T>::size()
 }
 
 template<class T>
-bool CStackNode<T>::empty()
+int CStackNode<T>::empty()
 {
-	if(this->ilen == 0)
-	{
-		return true;
-	}
-	return false;
+	return this->ilen == 0;
 }
 
 template<class T>
@@ -100,7 +94,7 @@ void CStackNode<T>::print_data()
 {
 	std::cout<<"´òÓ¡: ";
 	int i = 0;
-	while(this->arr[i++] != -1)
+	while(i++ < this->ilen)
 	{
 		std::cout<<this->arr[i-1]<<' ';
 	}

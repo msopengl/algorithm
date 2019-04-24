@@ -2,11 +2,11 @@
 // other: 
 // ing
 #define MAX_LEN 20
-template<class T> class CLinkStackNode
+template<class T> class CLinkQueueNode
 {
 public:
-	CLinkStackNode();
-	~CLinkStackNode();
+	CLinkQueueNode();
+	~CLinkQueueNode();
 
 private:
 	T* arr;
@@ -15,16 +15,16 @@ private:
 public:
 	void init();
 	bool push(T t);
-	T top();
+	T front();
 	T pop();
 	int size();
-	int empty();
+	bool empty();
 	void print_data();
 
 };
 
 template<class T>
-CLinkStackNode<T>::CLinkStackNode()
+CLinkQueueNode<T>::CLinkQueueNode()
 {
 	this->arr = new T[MAX_LEN];
 	memset(this->arr, -1, sizeof(T)*MAX_LEN);
@@ -32,7 +32,7 @@ CLinkStackNode<T>::CLinkStackNode()
 }
 
 template<class T>
-CLinkStackNode<T>::~CLinkStackNode()
+CLinkQueueNode<T>::~CLinkQueueNode()
 {
 	if(NULL != this->arr)
 	{
@@ -41,7 +41,7 @@ CLinkStackNode<T>::~CLinkStackNode()
 }
 
 template<class T>
-void CLinkStackNode<T>::init()
+void CLinkQueueNode<T>::init()
 {
 	for(int i = 1; i <= 10; i++)
 	{
@@ -50,48 +50,52 @@ void CLinkStackNode<T>::init()
 }
 
 template<class T>
-bool CLinkStackNode<T>::push(T t)
+bool CLinkQueueNode<T>::push(T t)
 {
 	this->arr[this->ilen++] = t;
 	return true;
 }
 
 template<class T>
-T CLinkStackNode<T>::top()
+T CLinkQueueNode<T>::front()
 {
 	if(this->ilen == 0)
 	{
 		return NULL;
 	}
-	return this->arr[this->ilen-1];
+	return this->arr[0];
 }
 
 template<class T>
-T CLinkStackNode<T>::pop()
+T CLinkQueueNode<T>::pop()
 {
 	if(this->ilen == 0)
 	{
 		return NULL;
 	}
 
-	this->arr[this->ilen-1] = -1;
+	int i = 0;
+	while(i++ < this->ilen)
+	{
+		this->arr[i-1] = this->arr[i];
+	}
 	--this->ilen;
 }
 
 template<class T>
-int CLinkStackNode<T>::size()
+int CLinkQueueNode<T>::size()
 {
 	return this->ilen;
 }
 
 template<class T>
-int CLinkStackNode<T>::empty()
+bool CLinkQueueNode<T>::empty()
 {
 	return this->ilen == 0;
 }
 
 template<class T>
-void CLinkStackNode<T>::print_data()
+void CLinkQueueNode<T>::print_data()
 {
 	std::cout<<"´òÓ¡: ";
 	int i = 0;

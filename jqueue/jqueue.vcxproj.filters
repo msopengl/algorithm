@@ -21,6 +21,12 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="jqueuenode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jlinkqueuenode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jqueue.cpp">

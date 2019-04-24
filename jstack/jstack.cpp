@@ -8,9 +8,7 @@ int main()
 	// Êý¾ÝÕ»
 	std::cout<<"***Êý×éÕ»***"<<std::endl;
 	CStackNode<int> stack_node;
-	bool is_epy = stack_node.empty();
-	int i_epy = (is_epy == true) ? 1 : 0;
-	std::cout<<"Õ»ÊÇ·ñ¿Õ: "<<i_epy<<std::endl;
+	std::cout<<"Õ»ÊÇ·ñ¿Õ: "<<stack_node.empty()<<std::endl;
 	int sz = stack_node.size();
 	std::cout<<"Õ»³¤¶È: "<<sz<<std::endl;
 	stack_node.init();
@@ -27,22 +25,17 @@ int main()
 	stack_node.print_data();
 	stack_node.pop();
 	stack_node.print_data();
-	int itop = stack_node.top();
-	std::cout<<"Õ»¶¥Öµ: "<<itop<<std::endl;
-	is_epy = stack_node.empty();
-	i_epy = (is_epy == true) ? 1 : 0;
+	std::cout<<"Õ»¶¥Öµ: "<<stack_node.top()<<std::endl;
 	sz = stack_node.size();
 	std::cout<<"Õ»³¤¶È: "<<sz<<std::endl;
-	std::cout<<"Õ»ÊÇ·ñ¿Õ: "<<i_epy<<std::endl;
+	std::cout<<"Õ»ÊÇ·ñ¿Õ: "<<stack_node.empty()<<std::endl;
 	
 	std::cout<<std::endl;
 
 	// Á´±íÕ»
 	std::cout<<"***Á´±íÕ»***"<<std::endl;
 	CLinkStackNode<int> link_stack_node;
-	is_epy = link_stack_node.empty();
-	i_epy = (is_epy == true) ? 1 : 0;
-	std::cout<<"Õ»ÊÇ·ñ¿Õ: "<<i_epy<<std::endl;
+	std::cout<<"Õ»ÊÇ·ñ¿Õ: "<<link_stack_node.empty()<<std::endl;
 	sz = link_stack_node.size();
 	std::cout<<"Õ»³¤¶È: "<<sz<<std::endl;
 	link_stack_node.init();
@@ -59,13 +52,10 @@ int main()
 	link_stack_node.print_data();
 	link_stack_node.pop();
 	link_stack_node.print_data();
-	itop = link_stack_node.top();
-	std::cout<<"Õ»¶¥Öµ: "<<itop<<std::endl;
-	is_epy = link_stack_node.empty();
-	i_epy = (is_epy == true) ? 1 : 0;
+	std::cout<<"Õ»¶¥Öµ: "<<link_stack_node.top()<<std::endl;
 	sz = link_stack_node.size();
 	std::cout<<"Õ»³¤¶È: "<<sz<<std::endl;
-	std::cout<<"Õ»ÊÇ·ñ¿Õ: "<<i_epy<<std::endl;
+	std::cout<<"Õ»ÊÇ·ñ¿Õ: "<<stack_node.empty()<<std::endl;
 
 	int p;
 	std::cin>>p;

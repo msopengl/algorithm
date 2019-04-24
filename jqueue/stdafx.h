@@ -7,4 +7,9 @@
 
 #include <stdio.h>
 
+#include <iostream>
+using namespace std;
+#include "jqueuenode.h"
+#include "jlinkqueuenode.h"
+
 // TODO: reference additional headers your program requires here
