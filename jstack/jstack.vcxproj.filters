@@ -21,6 +21,12 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="jstacknode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jlinkstacknode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jstack.cpp">

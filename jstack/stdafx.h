@@ -7,4 +7,10 @@
 
 #include <stdio.h>
 
+#include <iostream>
+using namespace std;
+
+#include "jstacknode.h"
+#include "jlinkstacknode.h"
+
 // TODO: reference additional headers your program requires here
