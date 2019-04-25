@@ -36,15 +36,24 @@
     <ClInclude Include="..\jcommon\jcommon.h">
       <Filter>Header Files\jcommon</Filter>
     </ClInclude>
+    <ClInclude Include="insertsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="selectsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="heapsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mergesort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shellsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jsort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="quicksort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="bubblesort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\jcommon\jcommon.cpp">

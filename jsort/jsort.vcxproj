@@ -80,14 +80,17 @@
   <ItemGroup>
     <ClInclude Include="..\jcommon\jcommon.h" />
     <ClInclude Include="bubblesort.h" />
+    <ClInclude Include="heapsort.h" />
+    <ClInclude Include="insertsort.h" />
+    <ClInclude Include="mergesort.h" />
     <ClInclude Include="quicksort.h" />
+    <ClInclude Include="selectsort.h" />
+    <ClInclude Include="shellsort.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\jcommon\jcommon.cpp" />
-    <ClCompile Include="bubblesort.cpp" />
     <ClCompile Include="jsort.cpp" />
-    <ClCompile Include="quicksort.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
