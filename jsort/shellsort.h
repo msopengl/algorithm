@@ -1,24 +1,27 @@
-// shellsort.h: ¶ÑÅÅÐò
-// ing https://www.cnblogs.com/daimingming/p/3219744.html
+// shellsort.h: Ï£¶ûÅÅÐò
+// other: https://www.cnblogs.com/daimingming/p/3219744.html https://www.cnblogs.com/yonghao/p/5151641.html
 // Ë¼Â·£º
 #pragma once
 void shellsort(int *arr, int n)
 {
-	for(int i = 0; i < n; i++)
+	int count = 1;
+    int index = n/2;
+    while(index>=1)
 	{
-		int min = i;
-		int val = arr[i];
-		for(int j = i+1; j < n; j++)
+        for(int i = index; i < n;i++)
 		{
-			if(val > arr[j])
+            for(int j = i-index;j >= 0;j -= index)
 			{
-				min = j;
-				val = arr[j];
-			}
-		}
-		swap(arr[i], arr[min]);
-		cout<<"Ï£¶ûÅÅÐò->ÅÅÐò¹ý³Ì:step=>"<<i+1<<"=> ";
+                if(arr[j] > arr[j+index])
+				{
+					swap(arr[j], arr[j+index]);
+                }
+            }
+        }
+        index = index/2;
+		cout<<"Ï£¶ûÅÅÐò->ÅÅÐò¹ý³Ì:step=>"<<count<<"=> ";
 		print_array(arr);
 		cout<<std::endl;
-	}
+		++count;
+    }
 }

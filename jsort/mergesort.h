@@ -1,4 +1,4 @@
-// mergesort.h: ¶ÑÅÅÐò
+// mergesort.h: ¹é²¢ÅÅÐò
 // ing https://www.cnblogs.com/daimingming/p/3219744.html
 // Ë¼Â·£º
 #pragma once
