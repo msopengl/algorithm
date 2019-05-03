@@ -17,7 +17,7 @@ void swap(ElementData &a, ElementData &b);
 /*
 	ADT สýื้
 */
-#define NUM_MAX_LEN 10
+#define NUM_MAX_LEN 7
 typedef struct tagTArray
 {
 	int ilen;

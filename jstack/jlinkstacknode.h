@@ -1,16 +1,22 @@
 #pragma once
-// other: 
-// ing
+// other: https://blog.csdn.net/zichen_ziqi/article/details/80807989
 #define MAX_LEN 20
 template<class T> class CLinkStackNode
 {
+private:
+	struct Node
+	{
+		T data;
+		Node* next;
+	};
+
+	Node* phead;
+	Node* p;
+	int ilen;
+
 public:
 	CLinkStackNode();
 	~CLinkStackNode();
-
-private:
-	T* arr;
-	int ilen;
 
 public:
 	void init();
@@ -26,18 +32,14 @@ public:
 template<class T>
 CLinkStackNode<T>::CLinkStackNode()
 {
-	this->arr = new T[MAX_LEN];
-	memset(this->arr, -1, sizeof(T)*MAX_LEN);
+	this->phead = NULL;
+	this->p = NULL;
 	this->ilen = 0;
 }
 
 template<class T>
 CLinkStackNode<T>::~CLinkStackNode()
 {
-	if(NULL != this->arr)
-	{
-		delete[] this->arr;
-	}
 }
 
 template<class T>
@@ -52,18 +54,21 @@ void CLinkStackNode<T>::init()
 template<class T>
 bool CLinkStackNode<T>::push(T t)
 {
-	this->arr[this->ilen++] = t;
-	return true;
-}
-
-template<class T>
-T CLinkStackNode<T>::top()
-{
-	if(this->ilen == 0)
+	Node* q = new Node;
+	q->data = t;
+	if(this->phead == NULL)
 	{
-		return NULL;
+		q->next = NULL;
+		this->p = q;
+		this->phead = q;
 	}
-	return this->arr[this->ilen-1];
+	else
+	{
+		q->next = this->p;
+		this->p = q;
+	}
+	++this->ilen;
+	return true;
 }
 
 template<class T>
@@ -74,8 +79,23 @@ T CLinkStackNode<T>::pop()
 		return NULL;
 	}
 
-	this->arr[this->ilen-1] = -1;
+	Node* q;
+	q = this->p;
+	T data = this->p->data;
+	this->p = this->p->next;
+	delete q;
 	--this->ilen;
+	return data;
+}
+
+template<class T>
+T CLinkStackNode<T>::top()
+{
+	if(this->ilen == 0)
+	{
+		return NULL;
+	}
+	return this->p->data;
 }
 
 template<class T>
@@ -94,10 +114,11 @@ template<class T>
 void CLinkStackNode<T>::print_data()
 {
 	std::cout<<"´òÓ¡: ";
-	int i = 0;
-	while(i++ < this->ilen)
+	Node* pcur = this->p;
+	while(pcur != NULL)
 	{
-		std::cout<<this->arr[i-1]<<' ';
+		std::cout<<pcur->data<<' ';
+		pcur = pcur->next;
 	}
 	std::cout<<std::endl;
 }

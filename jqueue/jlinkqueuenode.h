@@ -1,24 +1,30 @@
 #pragma once
 // other: 
-// ing
 #define MAX_LEN 20
 template<class T> class CLinkQueueNode
 {
+private:
+	struct Node
+	{
+		T data;
+		Node* next;
+	};
+
+	Node* phead;
+	Node* ptail;
+	int ilen;
+
 public:
 	CLinkQueueNode();
 	~CLinkQueueNode();
 
-private:
-	T* arr;
-	int ilen;
-
 public:
 	void init();
 	bool push(T t);
-	T front();
+	T top();
 	T pop();
 	int size();
-	bool empty();
+	int empty();
 	void print_data();
 
 };
@@ -26,18 +32,14 @@ public:
 template<class T>
 CLinkQueueNode<T>::CLinkQueueNode()
 {
-	this->arr = new T[MAX_LEN];
-	memset(this->arr, -1, sizeof(T)*MAX_LEN);
+	this->phead = NULL;;
+	this->ptail = this->phead;
 	this->ilen = 0;
 }
 
 template<class T>
 CLinkQueueNode<T>::~CLinkQueueNode()
 {
-	if(NULL != this->arr)
-	{
-		delete[] this->arr;
-	}
 }
 
 template<class T>
@@ -52,18 +54,22 @@ void CLinkQueueNode<T>::init()
 template<class T>
 bool CLinkQueueNode<T>::push(T t)
 {
-	this->arr[this->ilen++] = t;
-	return true;
-}
-
-template<class T>
-T CLinkQueueNode<T>::front()
-{
-	if(this->ilen == 0)
+	Node* q = new Node;
+	q->data = t;
+	if(this->phead == NULL)
 	{
-		return NULL;
+		this->phead = q;
+		q->next = NULL;
+		this->ptail = q;
 	}
-	return this->arr[0];
+	else
+	{
+		q->next = NULL;
+		this->ptail->next = q;
+		this->ptail = q;
+	}
+	++this->ilen;
+	return true;
 }
 
 template<class T>
@@ -74,12 +80,23 @@ T CLinkQueueNode<T>::pop()
 		return NULL;
 	}
 
-	int i = 0;
-	while(i++ < this->ilen)
-	{
-		this->arr[i-1] = this->arr[i];
-	}
+	Node* q;
+	q = this->phead;
+	T data = q->data;
+	this->phead = this->phead->next;
+	delete q;
 	--this->ilen;
+	return data;
+}
+
+template<class T>
+T CLinkQueueNode<T>::top()
+{
+	if(this->ilen == 0)
+	{
+		return NULL;
+	}
+	return this->phead->data;
 }
 
 template<class T>
@@ -89,19 +106,20 @@ int CLinkQueueNode<T>::size()
 }
 
 template<class T>
-bool CLinkQueueNode<T>::empty()
+int CLinkQueueNode<T>::empty()
 {
-	return this->ilen == 0;
+	return this->phead == this->ptail;
 }
 
 template<class T>
 void CLinkQueueNode<T>::print_data()
 {
 	std::cout<<"´òÓ¡: ";
-	int i = 0;
-	while(i++ < this->ilen)
+	Node* pcur = this->phead;
+	while(pcur != NULL)
 	{
-		std::cout<<this->arr[i-1]<<' ';
+		std::cout<<pcur->data<<' ';
+		pcur = pcur->next;
 	}
 	std::cout<<std::endl;
 }

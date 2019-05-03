@@ -11,20 +11,27 @@
 void rand_data(TArray& t_arry)
 {
 	cout<<"Ëæ»ú: ";
-	//for ( int idx = 0; idx < NUM_MAX_LEN; ++idx )
-	//{
-	//	int inum;
-	//	inum = rand()%( NUM_MAX_LEN - 1 ) + 1;
-	//	t_arry.add(inum);
-	//	cout<<inum<<' ';
-	//}
-	for (int idx = 0; idx < NUM_MAX_LEN; ++idx)
+	int i = 1;
+	if(i==0)
 	{
-		int inum;
-		inum = NUM_MAX_LEN-idx;
-		t_arry.add(inum);
-		cout<<inum<<' ';
-	}	
+		for ( int idx = 0; idx < NUM_MAX_LEN; ++idx )
+		{
+			int inum;
+			inum = rand()%( NUM_MAX_LEN - 1 ) + 1;
+			t_arry.add(inum);
+			cout<<inum<<' ';
+		}
+	}
+	else
+	{
+		for (int idx = 0; idx < NUM_MAX_LEN; ++idx)
+		{
+			int inum;
+			inum = NUM_MAX_LEN-idx;
+			t_arry.add(inum);
+			cout<<inum<<' ';
+		}	
+	}
 	cout<<std::endl;
 }
 
@@ -67,10 +74,10 @@ int main()
 	//cout<<endl<<std::endl;
 
 	// Ï£¶ûÅÅĞò ing
-	t_array.clear();
+	//t_array.clear();
 	rand_data(t_array);
 	shellsort(t_array.arr, NUM_MAX_LEN);
-	cout<<"Ï£¶ûÅÅĞò->½á¹û: ";
+	//cout<<"Ï£¶ûÅÅĞò->½á¹û: ";
 	print_array(t_array.arr);
 	cout<<endl<<std::endl;
 
@@ -78,9 +85,11 @@ int main()
 	//t_array.clear();
 	//rand_data(t_array);
 	//heapsort(t_array.arr, NUM_MAX_LEN);
-	//cout<<"¶ÑÅÅĞò->½á¹û: ";
-	//print_array(t_array.arr);
-	//cout<<endl<<std::endl;
+	//heapsort(t_array.arr, NUM_MAX_LEN);
+	heapsort(t_array.arr, NUM_MAX_LEN);
+	cout<<"¶ÑÅÅĞò->½á¹û: ";
+	print_array(t_array.arr);
+	cout<<endl<<std::endl;
 
 	//// ¹é²¢ÅÅĞò ing
 	//t_array.clear();

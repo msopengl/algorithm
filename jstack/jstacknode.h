@@ -56,16 +56,6 @@ bool CStackNode<T>::push(T t)
 }
 
 template<class T>
-T CStackNode<T>::top()
-{
-	if(this->ilen == 0)
-	{
-		return NULL;
-	}
-	return this->arr[this->ilen-1];
-}
-
-template<class T>
 T CStackNode<T>::pop()
 {
 	if(this->ilen == 0)
@@ -75,6 +65,16 @@ T CStackNode<T>::pop()
 
 	this->arr[this->ilen-1] = -1;
 	--this->ilen;
+}
+
+template<class T>
+T CStackNode<T>::top()
+{
+	if(this->ilen == 0)
+	{
+		return NULL;
+	}
+	return this->arr[this->ilen-1];
 }
 
 template<class T>
