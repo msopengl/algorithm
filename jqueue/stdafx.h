@@ -11,5 +11,6 @@
 using namespace std;
 #include "jqueuenode.h"
 #include "jlinkqueuenode.h"
+#include "jcirclequeuenode.h"
 
 // TODO: reference additional headers your program requires here

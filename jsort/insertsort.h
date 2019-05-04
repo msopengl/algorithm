@@ -1,7 +1,7 @@
 // insertsort.h: ÷±Ω”≤Â»Î≈≈–Ú
 // other: http://www.cnblogs.com/XavierJian/p/5775321.html
 #pragma once
-void insertsort(int *arr, int n)
+void insertsort(int* arr, int n)
 {
 	for(int i = 1; i < n; i++)
 	{

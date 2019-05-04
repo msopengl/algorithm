@@ -2,7 +2,7 @@
 //
 #pragma once
 
-void bubblesort(int *arr)
+void bubblesort(int* arr)
 {
 	for(int i = 0; i < NUM_MAX_LEN-1; i++)
 	{

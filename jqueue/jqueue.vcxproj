@@ -78,6 +78,7 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="jcirclequeuenode.h" />
     <ClInclude Include="jlinkqueuenode.h" />
     <ClInclude Include="jqueuenode.h" />
     <ClInclude Include="stdafx.h" />

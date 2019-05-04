@@ -1,5 +1,5 @@
 ﻿// binarytree.h: 二叉树、平衡二叉树、B树
-//
+// ing
 #pragma once
 
 // 创建二叉树

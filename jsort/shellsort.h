@@ -3,7 +3,7 @@
 // Ë¼Â·£º
 #pragma once
 // +2
-void shellsort(int *arr, int n)
+void shellsort(int* arr, int n)
 {
 	int part = n/2;
 	while(part>=1)

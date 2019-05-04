@@ -2,7 +2,7 @@
 //
 #pragma once
 int i_quick_pos = 0;
-int partition(int *arr, int beg, int end)
+int partition(int* arr, int beg, int end)
 {
 	++i_quick_pos;
 	int sentinel = arr[end];

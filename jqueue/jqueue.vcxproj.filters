@@ -27,6 +27,9 @@
     <ClInclude Include="jlinkqueuenode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="jcirclequeuenode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jqueue.cpp">

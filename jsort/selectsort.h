@@ -2,7 +2,7 @@
 // https://www.jb51.net/article/129888.htm
 // 思路：找到无序中最小的元素, 和第一个交换, 依次遍历
 #pragma once
-void selectsort(int *arr, int n)
+void selectsort(int* arr, int n)
 {
 	for(int i = 0; i < n; i++)
 	{

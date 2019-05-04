@@ -84,6 +84,7 @@
     <ClInclude Include="insertsort.h" />
     <ClInclude Include="mergesort.h" />
     <ClInclude Include="quicksort.h" />
+    <ClInclude Include="radixsort.h" />
     <ClInclude Include="selectsort.h" />
     <ClInclude Include="shellsort.h" />
     <ClInclude Include="stdafx.h" />
