@@ -84,26 +84,3 @@ typedef struct tagTList
 }TList, *PTList;
 
 
-/*
-	ADT Ê÷½Úµã
-*/
-typedef struct tagTTree
-{
-	ElementData data;
-	struct tagTTree* ltree;
-	struct tagTTree* rtree;
-
-	tagTTree()
-	{
-		clear();
-	}
-
-	bool clear()
-	{
-		ltree = NULL;
-		rtree = NULL;
-		data = -1;
-		return true;
-	}
-
-}TTree, *PTTree;

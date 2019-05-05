@@ -13,6 +13,7 @@ private:
 public:
 	bool Clear();
 	PTList CreateNodes(ElementData data);
+	//PTList Reverse(PTList head);
 	void PrintList(PTList head);
 
 	bool InsertNode(PTList head, int i, ElementData data);

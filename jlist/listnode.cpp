@@ -27,6 +27,25 @@ PTList CListNode::CreateNodes(ElementData data)
 	return plist;
 }
 
+//PTList CListNode::Reverse(PTList head)
+//{
+//    if(head == NULL)
+//        return NULL;
+//
+//    PTList cur = head;
+//    PTList pre = NULL;
+//    PTList next = NULL;
+//    while(cur->next != NULL)
+//    {
+//        next = cur->next;
+//        cur->next = pre;
+//        pre = cur;
+//        cur = next;
+//    }
+//    cur->next = pre;
+//    return cur;
+//}
+
 void CListNode::PrintList(PTList head)
 {
 	std::cout<<"´òÓ¡: ";

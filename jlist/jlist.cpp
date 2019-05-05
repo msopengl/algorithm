@@ -20,8 +20,8 @@ int main()
 	}
 	std::cout<<std::endl;
 	std::cout<<"当前长度: "<<listnode.GetLen()<<std::endl;
+	//head = listnode.Reverse(head);
 
-	std::cout<<std::endl;
 	listnode.PrintList(head);
 
 	listnode.Clear();
@@ -42,7 +42,6 @@ int main()
 	std::cout<<std::endl;
 	std::cout<<"当前长度: "<<listnode.GetLen()<<std::endl;
 
-	std::cout<<std::endl;
 	listnode.PrintList(head);
 
 	std::cout<<std::endl;
