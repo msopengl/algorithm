@@ -2,6 +2,7 @@
 // other: https://www.cnblogs.com/llguanli/p/7363657.html
 // 求宽度 https://blog.csdn.net/liuyi1207164339/article/details/50898902
 // 已经先序、中序创建二叉树，或其他序列 https://blog.csdn.net/DZT2727/article/details/78926690
+// 求树最远距离 https://blog.csdn.net/troubleshooter/article/details/41021475
 
 #pragma once
 #include <vector>
@@ -15,6 +16,9 @@ typedef struct tagTTree
 	struct tagTTree* lchild;
 	struct tagTTree* rchild;
 
+	int leftsubtreemaxlength;
+	int rightsubtreemaxlength;
+
 	tagTTree()
 	{
 		clear();
@@ -25,6 +29,8 @@ typedef struct tagTTree
 		lchild = NULL;
 		rchild = NULL;
 		data = -1;
+		leftsubtreemaxlength = 0;
+		rightsubtreemaxlength = 0;
 		return true;
 	};
 
@@ -39,7 +45,7 @@ PTTree bst_createtree(PTTree root, ElementData n);
 // ing 删除
 
 // ing 已经先序、中序创建二叉树，或其他序列
-PTTree planttree(vector<int> pre,vector<int> in);
+PTTree make_tree(vector<int> pre,vector<int> in);
 
 // ing 已经先序、中序, 求后续，或其他序列
 
@@ -61,6 +67,7 @@ int tree_width(PTTree root);
 
 // ing 求树最远距离
 int tree_max_range(PTTree root, int& imaxdistance);
+void tree_max_range_ex(PTTree root, int* maxnodelength); // 采用
 
 // 层次遍历
 void tree_level_print(PTTree root);

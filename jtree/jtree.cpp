@@ -78,7 +78,8 @@ int main()
 	std::cout<<std::endl;
 
 	int imaxdistance = 0;
-	tree_max_range(root, imaxdistance);
+	//tree_max_range(root, imaxdistance);
+	tree_max_range_ex(root, &imaxdistance);
 	std::cout<<"\n树的节点最大距离: "<<imaxdistance;
 	std::cout<<std::endl<<std::endl;
 

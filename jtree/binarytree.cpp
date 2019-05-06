@@ -1,4 +1,4 @@
-// binarytree.h: 冒泡排序
+// binarytree.h: 二叉树
 //
 #include "stdafx.h"
 #include <queue>
@@ -194,6 +194,57 @@ int tree_max_range(PTTree root, int& imaxdistance)
 	return iheightlefttree > iheightrighttree ? iheightlefttree : iheightrighttree;
 }
 
+void tree_max_range_ex(PTTree root, int* maxnodelength) 
+{
+    // 遍历到叶子结点，返回。
+    if (root == NULL) {
+        return;
+    }
+ 
+    // 如果左子树为空，那么该结点左子树最长距离为0。
+    if (root->lchild == NULL) {
+        root->leftsubtreemaxlength = 0;
+    }
+ 
+    // 如果右子树为空，那么该结点右子树最长距离为0。
+    if (root->rchild == NULL) {
+        root->rightsubtreemaxlength = 0;
+    }
+ 
+    // 如果左子树不为空，递归查找左子树最长距离。
+    if (root->lchild != NULL) {
+        tree_max_range_ex(root->lchild, maxnodelength);
+    }
+ 
+    // 如果右子树不为空，递归查找右子树最长距离。
+    if (root->rchild != NULL) {
+        tree_max_range_ex(root->rchild, maxnodelength);
+    }
+ 
+    // 计算左子树中距离根结点的最长距离。
+    if (root->lchild != NULL) {
+        if (root->lchild->leftsubtreemaxlength > root->lchild->rightsubtreemaxlength) {
+            root->leftsubtreemaxlength = root->lchild->leftsubtreemaxlength + 1;
+        } else {
+            root->leftsubtreemaxlength = root->lchild->rightsubtreemaxlength + 1;
+        }
+    }
+ 
+    // 计算右子树中距离根结点的最长距离。
+    if (root->rchild != NULL) {
+        if (root->rchild->leftsubtreemaxlength > root->rchild->rightsubtreemaxlength) {
+            root->rightsubtreemaxlength = root->rchild->leftsubtreemaxlength + 1;
+        } else {
+            root->rightsubtreemaxlength = root->rchild->rightsubtreemaxlength + 1;
+        }
+    }
+ 
+    // 更新最长距离。
+    if (root->leftsubtreemaxlength + root->rightsubtreemaxlength > *maxnodelength) {
+        *maxnodelength = root->leftsubtreemaxlength + root->rightsubtreemaxlength;
+    }
+}
+
 void tree_level_print(PTTree root)
 {
 	if(root == NULL)
@@ -213,33 +264,33 @@ void tree_level_print(PTTree root)
 	}
 }
 
-PTTree planttree(vector<int> pre,vector<int> in)
+PTTree make_tree(vector<int> pre,vector<int> in)
 {
-    if(pre.size()==0||in.size()==0||pre.size()!=in.size())//******递归基和错误条件 
+    if(pre.size()==0||in.size()==0||pre.size()!=in.size()) // 递归基和错误条件 
         return NULL;
 
-    PTTree root = new TTree;//******************************创建根节点 
+    PTTree root = new TTree; // 创建根节点 
     int index = 0;
-    vector<int> left_pre,right_pre,left_in,right_in;//***********下面的递归需要的参数 
+    vector<int> left_pre,right_pre,left_in,right_in; // 下面的递归需要的参数 
 
-    for(int i = 0;i<in.size();i++)//*****************************在中序遍历里面找到根节点 
+    for(int i = 0;i<in.size();i++) // 在中序遍历里面找到根节点 
         if(root->data == in[i])
             index = i;
 
     for(int i = 0;i<index;i++)
     {
-        left_pre.push_back(pre[i+1]);//*************************根节点左子树前序遍历序列 
-        left_in.push_back(in[i]);//*****************************根节点右左子树中序遍历序列       
+        left_pre.push_back(pre[i+1]); // 根节点左子树前序遍历序列 
+        left_in.push_back(in[i]); // 根节点右左子树中序遍历序列       
     }
 
     for(int j = index+1;j<pre.size();j++)
     {
-        right_pre.push_back(pre[j]);//**************************根节点右子树前序遍历序列 
-        right_in.push_back(in[j]);//****************************根节点右子树中序遍历序列 
+        right_pre.push_back(pre[j]); // 根节点右子树前序遍历序列 
+        right_in.push_back(in[j]); // 根节点右子树中序遍历序列 
     }
 
-    root->lchild = planttree(left_pre,left_in);//*****************递归构建左子树 
-    root->rchild = planttree(right_pre,right_in);//**************递归构建右子树 
+    root->lchild = make_tree(left_pre,left_in); // 递归构建左子树 
+    root->rchild = make_tree(right_pre,right_in); // 递归构建右子树 
     return root;
 
 }
